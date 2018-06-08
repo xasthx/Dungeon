@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DougDimmaDungeon.Core;
 using RLNET;
 
 namespace DougDimmaDungeon
@@ -47,17 +48,17 @@ namespace DougDimmaDungeon
 
         private static void OnRootConsoleUpdate (Object sender, UpdateEventArgs e)
         {
-            _mapConsole.SetBackColor(0, 0, _mapWidth, _mapHeight, RLColor.Black);
-            _mapConsole.Print(1, 1, "MAP", RLColor.White);
+            _mapConsole.SetBackColor(0, 0, _mapWidth, _mapHeight, Colors.FloorBackground);
+            _mapConsole.Print(1, 1, "MAP", Colors.TextHeading);
 
-            _messageConsole.SetBackColor(0, 0, _messageWidth, _messageHeight, RLColor.Gray);
-            _messageConsole.Print(1, 1, "MESSAGES", RLColor.White);
+            _messageConsole.SetBackColor(0, 0, _messageWidth, _messageHeight, Swatch.DbDeepWater);
+            _messageConsole.Print(1, 1, "MESSAGES", Colors.TextHeading);
 
-            _statConsole.SetBackColor(0, 0, _statWidth, _statHeight, RLColor.Brown);
-            _statConsole.Print(1, 1, "STATS", RLColor.White);
+            _statConsole.SetBackColor(0, 0, _statWidth, _statHeight, Swatch.DbOldStone);
+            _statConsole.Print(1, 1, "STATS", Colors.TextHeading);
 
-            _inventoryConsole.SetBackColor(0, 0, _inventoryWidth, _inventoryHeight, RLColor.Cyan);
-            _inventoryConsole.Print(1, 1, "INVENTORY", RLColor.White);
+            _inventoryConsole.SetBackColor(0, 0, _inventoryWidth, _inventoryHeight, Swatch.DbWood);
+            _inventoryConsole.Print(1, 1, "INVENTORY", Colors.TextHeading);
         }
         private static void OnRootConsoleRender(object sender, UpdateEventArgs e)
         {
